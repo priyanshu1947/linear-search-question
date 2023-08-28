@@ -9,9 +9,9 @@ public class search2Darray
                 {23,4,1},
                 {18,12,3,9},
                 {78,99,34,56},
-                {18,12}};
+                {67,12}};
 
-        int target = 34;
+        int target = 18;
         int[] ans = search(arr,target);
         System.out.println(Arrays.toString(ans));
 
