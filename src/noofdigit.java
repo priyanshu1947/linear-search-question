@@ -1,16 +1,12 @@
 class noofdigit
 {
-    public static void main (String [] args)
-
-    {
-        int[] nums = {12,345,2,6,7896};
-        noofdigit solution = new noofdigit();
-        int evendigitcount = solution.findNumbers(nums);
-        System.out.println("count of numbers with even digits: " +evendigitcount);
+    public static void main (String [] args) {
+        int[] nums = {12, 345, 2, 6, 7896};
+        System.out.println(findNumbers(nums));
     }
 
 
-    int findNumbers(int[] nums) {
+    static int findNumbers(int[] nums) {
         int count =0;
         for (int i = 0; i < nums.length; i++) {
             int num = nums[i];
@@ -21,7 +17,7 @@ class noofdigit
 
         return count;
     }
-    boolean even(int num)
+    static boolean even(int num)
     {
         int numberofdigit = digits(num);
         if (numberofdigit %2 == 0)
@@ -30,7 +26,11 @@ class noofdigit
         }
         return false;
     }
-    int digits(int num)
+    static int digits2(int num)
+    {
+        return (int) (Math.log10(num))+1;
+    }
+    static int digits(int num)
     {
         if(num <0 )
         {
